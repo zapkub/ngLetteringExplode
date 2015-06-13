@@ -1,0 +1,55 @@
+<html ng-app="myApp">
+
+  <meta http-equiv="Content-Language" content="th" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="initial-scale=1">
+<head>
+  <link rel="stylesheet" href="css/CSPrajad.css">
+  <style>
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+
+
+  display:block !important;
+  opacity: 0;
+  z-index: -5;
+}
+</style>
+  <style>
+  body{ display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'cs_prajadregular';
+  }
+  span{ display:inline-block;}
+  </style>
+</head>
+    <body ng-controller="textController">
+      <div style="text-align: center;padding:5em;overflow:hidden">
+        <h1 data-unrotate="show" data-lettering="letters" data-groupname="head">Pure Angular</h1>
+
+        <h1 class="explode" data-unrotate="show" data-lettering="letters" data-groupname="article" >สวัส ดี ผมชื่อ รังสิกร รังสิกวานิช มีอาชีพ เป็นผู้พัฒนา โปรแกรมคอมพิวเตอร์ มีความเชี่ยวชาญในสายอาชีพ
+        เกี่ยวกับ โทรศัพท์มือถือระบบปฎิบัติการ iOS และ ยังมีอาชีพเป็น นักพัฒนาเว็บไซต์ด้านหน้า หรือ Front-End Developer ด้วยครับ อิอิ</h1>
+        <a href="#" ng-mouseover="show = true" ng-mouseleave="show = false" style="z-index:9">hover to read all word</a>
+        <a href="lib/ng-Lettering-spinning.js" >Download Script</a>
+        <h2>Guide</h2>
+        <pre>
+          <code>&lt;h1 class="explode" data-unrotate="show" data-lettering="letters" data-groupname="article" &gt; Some string &lt;/h1&gt;</code>
+        </pre>
+      </div>
+
+    </body>
+
+
+
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/ng-Lettering-spinning.js"></script>
+
+    </html>
+    <script>
+
+      var app = angular.module("myApp",['ngLetteringExplode']);
+
+      app.controller("textController",function($scope){
+
+        $scope.show = false;
+      });
+    </script>
