@@ -24,16 +24,28 @@
 </head>
     <body ng-controller="textController">
       <div style="text-align: center;padding:5em;overflow:hidden">
-        <h1 data-unrotate="show" data-lettering="letters" data-groupname="head">Pure Angular</h1>
+        <h1 data-unrotate="showHeader" data-lettering="letters" data-groupname="header">Pure Angular</h1>
 
-        <h1 class="explode" data-unrotate="show" data-lettering="letters" data-groupname="article" >สวัส ดี ผมชื่อ รังสิกร รังสิกวานิช มีอาชีพ เป็นผู้พัฒนา โปรแกรมคอมพิวเตอร์ มีความเชี่ยวชาญในสายอาชีพ
-        เกี่ยวกับ โทรศัพท์มือถือระบบปฎิบัติการ iOS และ ยังมีอาชีพเป็น นักพัฒนาเว็บไซต์ด้านหน้า หรือ Front-End Developer ด้วยครับ อิอิ</h1>
-        <a href="#" ng-mouseover="show = true" ng-mouseleave="show = false" style="z-index:9">hover to read all word</a>
-        <a href="lib/ng-Lettering-spinning.js" >Download Script</a>
+        <h1 class="explode" data-unrotate="show1" data-lettering="letters" data-groupname="article" >สวัส ดี ผมชื่อ รังสิกร รังสิกวานิช มีอาชีพ เป็นผู้พัฒนา โปรแกรมคอมพิวเตอร์ มีความเชี่ยวชาญในสายอาชีพ
+        เกี่ยวกับ โทรศัพท์มือถือระบบปฎิบัติการ iOS</h1>
+        <h1  data-unrotate="show2" data-lettering="letters" data-groupname="article2"> และ ยังมีอาชีพเป็น นักพัฒนาเว็บไซต์ด้านหน้า หรือ Front-End Developer ด้วยครับ อิอิ</h1>
+        <a href="#" ng-mouseover="showHeader = true" ng-mouseleave="showHeader = false" style="z-index:9">hover to read header</a>
+        <a href="#" ng-mouseover="show1 = true" ng-mouseleave="show1 = false" style="z-index:9">hover to read paragraph 1</a>
+        <a href="#" ng-mouseover="show2 = true" ng-mouseleave="show2 = false" style="z-index:9">hover to read paragraph 2</a>
+        <a href="#" ng-mouseover="show1 = true;show2 = true;showHeader = true" ng-mouseleave="show2 = false;show1 = false;showHeader = false" style="z-index:9">hover to read all text</a>
+
+        <a href="https://github.com/zapkub/ngLetteringExplode" >Download Script</a>
         <h2>Guide</h2>
         <pre>
           <code>&lt;h1 class="explode" data-unrotate="show" data-lettering="letters" data-groupname="article" &gt; Some string &lt;/h1&gt;</code>
         </pre>
+        and to active
+        <pre>
+          <code>
+            &lt;a href="#" ng-mouseover="show1 = true" ng-mouseleave="show1 = false" style="z-index:9"&gt;hover to read&lt;/a&gt;
+            </code>
+        </pre>
+
       </div>
 
     </body>
